@@ -9,11 +9,16 @@ import {
 } from "react-native";
 import AppDetail from "./AppDetail";
 
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducer";
+import { createLogger } from 'redux-logger';
+import ReduxThunk from 'redux-thunk';
 
-const myStore = createStore(reducer);
+const logger = createLogger(); 
+
+// const myStore = createStore(reducer);
+const myStore = createStore(reducer, applyMiddleware(logger, ReduxThunk))
 
 class App extends Component {
   render() {
