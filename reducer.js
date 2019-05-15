@@ -3,7 +3,8 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log('action')
+  console.log(action.type)
+  console.log(action.pages)
   switch (action.type) {
     case "SET_PAGES":
       return {
