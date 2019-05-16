@@ -15,9 +15,13 @@ import reducer from "./reducer";
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 
-const logger = createLogger(); 
+// const logger = createLogger(); 
+// const myStore = createStore(myStore, applyMiddleware(logger, thunk))
 
-const myStore = createStore(reducer, applyMiddleware(logger, thunk))
+const myStore = createStore(
+  myStore,
+  applyMiddleware(thunk)
+);
 
 class App extends Component {
   render() {
