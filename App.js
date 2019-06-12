@@ -19,7 +19,7 @@ import thunk from 'redux-thunk';
 // const myStore = createStore(myStore, applyMiddleware(logger, thunk))
 
 const myStore = createStore(
-  myStore,
+  reducer,
   applyMiddleware(thunk)
 );
 
