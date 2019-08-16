@@ -33,8 +33,8 @@ describe("Alphabetics Array Object return sort by object property name ascending
     ];
     const response = sortAlphabetize(listItems, "title", false);
 
-    // response == return from ~~~~ 
-    // expectedItem == mock up
+    // response 내꺼 아닌거
+    // expectedItem 내꺼 
     expect(response).toEqual(expectedItem);
   });
 }); 
